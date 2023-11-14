@@ -17,7 +17,7 @@ def create_cd_account(cd_balance, cd_interest_rate, cd_maturity):
     myCDAccount = Account(any, 0)
 
     # Calculate interest earned
-    cd_interest = cd_balance * (cd_interest_rate * cd_maturity)
+    cd_interest = cd_balance * (cd_interest_rate/100 * cd_maturity/12)
 
     # Update the CD account balance by adding the interest earned
     updated_cd_balance = cd_balance + cd_interest

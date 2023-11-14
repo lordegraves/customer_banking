@@ -18,7 +18,7 @@ def create_savings_account(savings_balance, savings_interest_rate, savings_matur
     mySavingsAccount = Account(any, 0)
 
     # Calculate interest earned
-    savings_interest = savings_balance * (savings_interest_rate * savings_maturity)
+    savings_interest = savings_balance * (savings_interest_rate/100 * savings_maturity/12)
 
     # Update the savings account balance by adding the interest earned
     updated_savings_balance = savings_balance + savings_interest
